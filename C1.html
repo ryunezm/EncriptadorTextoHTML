@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge #1: Text encrypter</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+
+<body>
+
+  <div class="columns"> <!-- flex-container -->
+    
+    <section class="column-1">
+        <div class="row-11">
+            <textarea class="textarea-1" name="target" id="target" placeholder="Enter some text..."></textarea>
+        </div>
+        
+        <div class="row-12">
+            ⚠️ Solo letras minúsculas y sin acentos.
+        </div>
+
+        <div class="row-13">
+            <button class="button-bottom-1" id="btn-bttm-11">Encriptar</button>
+            <button class="button-bottom-1" id="btn-bttm-12">Desencriptar</button>
+        </div>
+        
+    </section>
+
+    <section class="column-2">
+        <div class="row-21" id="warning-message">
+            <img src="images/search.svg" alt="" id="warning-message-img">
+            <b id="warning-message-title">Ningún mensaje fue encontrado</b>
+            <span id="warning-message-text">Ingresa el texto que desees encriptar o desencriptar</span>
+        </div>
+
+        <div class="row-22">
+            <textarea class="textarea-2" name="result" id="result" aria-label="result" disabled></textarea>
+        </div>
+        
+        <div class="row-23">
+            <button class="button-bottom-2" id="btn-bttm-2">Copiar</button>
+        </div>
+        
+    </section>
+
+  </div>
+  
+  <script src='js/main.js'></script>
+</body>
+
+</html>

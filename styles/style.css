@@ -1,0 +1,347 @@
+/* Variables de color */
+:root{
+    --primary-color: #4E3078;
+    --primary-color-light: #ECE1FC;
+    --primary-color-light-2: #D7BEFE;
+    --secondary-color: #F6E8E2;
+}
+
+/* Box-sizing */
+*{
+    box-sizing: border-box;
+}
+
+/* Remueve el efecto de enfoque para el textarea-1 */
+*:focus{
+    outline: none;
+}
+
+body, html{
+    background-color:var(--primary-color-light);
+    height: 99%;
+    font-size: xx-large;
+    /* overflow: hidden; */
+}
+
+/* Efectos de transición */
+.fade-in{
+    opacity: 1;
+    transition: opacity 3.5s linear;
+}
+
+.fade-out{
+    opacity: 0;
+    transition: opacity 3.5 linear;
+}
+
+/* Estilos para el flex-container, llamado columns en este caso */
+.columns{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    height: 100%;
+    width: 100%;
+}
+
+/* Estilos para la columna izquierda y derecha */
+.column-1{
+    padding:1%;
+    margin: 1% 1% 1% 1%;
+    width: 60%;
+}
+
+.column-2{
+    background-color: var(--secondary-color);
+    box-shadow: 0px 0px 1vh 1.5vh #E7DDF8;
+    border-radius: 2vh;
+    padding: 1%;
+    margin: 1% 1% 1% 1%;
+    width: 35%;
+}
+
+/* Estilos para las filas de la columna izquierda */
+.row-11{
+    height: 75%;
+}
+
+.row-12{
+    height: 5%;
+    font-size: 1vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    align-content: center;
+    padding: 0.5%;
+}
+
+.row-13{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 15%;
+}
+
+/* Estilos para las filas de la columna derecha */
+.row-21{
+    display: flex;
+    flex-flow: column;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5vh;
+}
+
+.row-22{
+    display: none;
+    height: 80%;
+ }
+
+.row-23{
+    display: none;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 15%;
+}
+
+/* Estilos para el textarea de la izquierda */
+.textarea-1{
+    background-color:transparent;
+    border-color: transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5vh;
+    color: var(--primary-color);
+    height: 95%;
+    width: 100%;
+    resize: none;
+}
+
+/* Estilos para el textarea de la derecha */
+.textarea-2{
+    background-color: transparent;
+    border-color: transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4vh;
+    height: 95%;
+    width: 100%;
+    resize: none;
+}
+
+/* Estilos para los botones de la izquierda */
+.button-bottom-1{
+    background-color: var(--primary-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3vh;
+    color: white;
+    text-align: center;
+    width: 48%;
+    height: 100%;
+    border-radius: 2vh;
+    border: 0.2px solid var(--primary-color);
+    cursor:pointer;
+}
+
+.button-bottom-1:active{
+    transform: translatey(4%);
+}
+
+/* Estilos para los botones de la derecha */
+.button-bottom-2{
+    background-color: transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3vh;
+    text-align: center;
+    color: var(--primary-color);
+    width: 100%;
+    height: 100%;
+    border-radius: 2vh;
+    border: 0.2vh solid var(--primary-color);
+    transition: ease-in-out;
+}
+
+.button-bottom-2:active{
+    transform: translateY(4%);
+}
+
+/* Estilo para el botón "desencriptar" */
+#btn-bttm-12{
+    background-color: var(--primary-color-light-2);
+    color: var(--primary-color);
+}
+
+/* Estilo para el botón "copiar" */
+#btn-bttm-2{
+    display: none;
+}
+
+/* Estilo para imagen de la niña con la lupa */
+#warning-message-img{
+    align-items: center;
+    justify-content: center;
+    margin-top: 15vh;
+    height: 25vmax;
+    animation: reveal 3s;
+    animation-duration: 8500ms;
+}
+
+/* #warning-message-img:active{
+    transition: all 0.5s ease;
+} */
+
+/* __________________________________________________________________________ */
+/* Estilos por si la pantalla está en orientación "portrait" */
+@media (orientation: portrait){
+    .columns{
+        display: flex;
+        flex-flow: column;
+        align-items: stretch;
+    }
+
+    .column-1{
+        border: 0px solid black;
+        width: 98%;
+        height: 70%;
+        padding: 2%;
+    }
+
+    .column-2{
+        border: 0px solid black;
+        width: 98%;
+        height: 30%;
+        padding: 2%;
+    }
+
+    .row-11{
+        border: 0px solid black;
+        height: 85%;
+    }
+
+    .row-12{
+        border: 0px solid black;
+        height: 5%;
+        font-size: 1.8vh;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: left;
+        align-content: center;
+        padding: 0.5%;
+    }
+
+    .row-13{
+        border: 0px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        height: 7vh;
+    }
+
+    .row-22{
+        border: 0px solid black;
+        height: 75%;
+    }
+
+    .row-23{
+        border: 0px solid black;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        height: 7vh;
+    }
+
+    #warning-message-img{
+        display: none;
+    }
+
+    .textarea-1{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 3vh;
+        height: 98%;
+        width: 100%;
+        resize: none;
+    }
+    
+    .textarea-2{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 2vh;
+        height: 95%;
+        width: 100%;
+        resize: none;
+    }
+
+    .p-1{
+        font-size: 1vh;
+    }
+
+    .button-bottom-1{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 2vh;
+        width: 48%;
+        height: 6vh;
+        border-radius: 15px;
+    }
+    
+    .button-bottom-2{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 2vh;
+        width: 100%;
+        height: 6vh;
+        border-radius: 15px;
+    }
+}
+
+/* __________________________________________________________________________ */
+/* Estilos para celulares con un aspect-ratio máximo de 2.45 */
+@media screen and (max-aspect-ratio: 2.45) and (orientation: portrait){
+    
+    .column-1{
+        border: 0px solid black;
+        display: flex;
+        flex-direction: column;
+        width: 98%;
+        height: 70%;
+        padding: 2%;
+    }
+
+    .row-12{
+        font-size: 1.5vh;
+        height: auto;
+    }
+
+    .row-13{
+        display: flex;
+        flex-flow: column wrap;
+        height: 30%;
+        width: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .button-bottom-1{
+        width: 100%;
+        height: 5.5vh;
+    }
+
+    .button-bottom-2{
+        width: 100%;
+    }
+
+    .row-21{
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        font-size: 2.5vh;
+    }
+
+}
