@@ -20,7 +20,6 @@ body, html{
     background-color:var(--primary-color-light);
     height: 99%;
     font-size: xx-large;
-    /* overflow: hidden; */
 }
 
 /* Efectos de transición */
@@ -34,38 +33,65 @@ body, html{
     transition: opacity 3.5 linear;
 }
 
+/* ______________________________________________________________________ */
+
+/* Estilos para el header */
+header{
+    border: solid 0px black;
+    display: flex;
+    width: 100%;
+    height: 5%;
+}
+
+header div{
+    border: solid 0px black;
+    font-size: 10vh;
+    color: var(--primary-color);
+    margin-left: 3vh;
+}
+
+/* ______________________________________________________________________ */
+
 /* Estilos para el flex-container, llamado columns en este caso */
-.columns{
+.flex-container{
+    border: solid 0px black;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: stretch;
-    height: 100%;
+    height: 90%;
     width: 100%;
 }
 
 /* Estilos para la columna izquierda y derecha */
 .column-1{
+    border: solid 0px black;
     padding:1%;
-    margin: 1% 1% 1% 1%;
+    margin: 0% 1% 1% 1%;
     width: 60%;
+    height: 95%;
+    padding-left: 10%;
 }
 
 .column-2{
+    border: solid 0px black;
     background-color: var(--secondary-color);
     box-shadow: 0px 0px 1vh 1.5vh #E7DDF8;
     border-radius: 2vh;
     padding: 1%;
-    margin: 1% 1% 1% 1%;
+    margin: 0% 1% 1% 1%;
     width: 35%;
+    height: 95%;
 }
 
 /* Estilos para las filas de la columna izquierda */
 .row-11{
+    border: solid 0px black;
     height: 75%;
 }
 
 .row-12{
+    border: solid 0px black;
     height: 5%;
     font-size: 1vmax;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -75,6 +101,7 @@ body, html{
 }
 
 .row-13{
+    border: solid 0px black;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -85,6 +112,7 @@ body, html{
 
 /* Estilos para las filas de la columna derecha */
 .row-21{
+    border: solid 0px black;
     display: flex;
     flex-flow: column;
     background-color: transparent;
@@ -97,11 +125,13 @@ body, html{
 }
 
 .row-22{
+    border: solid 0px black;
     display: none;
     height: 80%;
  }
 
 .row-23{
+    border: solid 0px black;
     display: none;
     flex-flow: row wrap;
     align-items: center;
@@ -120,6 +150,8 @@ body, html{
     height: 95%;
     width: 100%;
     resize: none;
+    /* padding-left: 4vh;
+    padding-top: 4vh; */
 }
 
 /* Estilos para el textarea de la derecha */
@@ -185,19 +217,65 @@ body, html{
     align-items: center;
     justify-content: center;
     margin-top: 15vh;
-    height: 25vmax;
-    animation: reveal 3s;
-    animation-duration: 8500ms;
+    height: 17vmax;
+    /* animation: reveal 3s;
+    animation-duration: 8500ms; */
 }
 
-/* #warning-message-img:active{
-    transition: all 0.5s ease;
-} */
+/* Estilo del footer */
+#info{
+    border: solid 0px black;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+#info-autor{
+    border: solid 0px cyan;
+    display: flex;
+    font-size: 2.7vh;
+    /* height: 100%; */
+}
+
+#info-rrss{
+    border: solid 0px red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 10%;
+}
+
+.ref-links{
+    display: flex;
+    border: solid 0px sienna;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vh;
+}
+
+#logo-gh{
+    border: solid 0px black;
+    display: flex;
+    width: 50%;
+}
+
+#logo-li{
+    border: solid 0px black;
+    display: flex;
+    width: 50%;
+}
 
 /* __________________________________________________________________________ */
+
 /* Estilos por si la pantalla está en orientación "portrait" */
 @media (orientation: portrait){
-    .columns{
+    .flex-container{
         display: flex;
         flex-flow: column;
         align-items: stretch;
@@ -218,6 +296,7 @@ body, html{
     }
 
     .row-11{
+        padding-top: 15%;
         border: 0px solid black;
         height: 85%;
     }
@@ -296,6 +375,11 @@ body, html{
         height: 6vh;
         border-radius: 15px;
     }
+
+    footer #info-autor{
+        border: solid 0px cyan;
+        font-size: 2vh;
+    }
 }
 
 /* __________________________________________________________________________ */
@@ -343,5 +427,4 @@ body, html{
         justify-content: center;
         font-size: 2.5vh;
     }
-
 }
