@@ -59,16 +59,23 @@ function textareaChecker(){
     let textResult = textareaObjResult.value;
 
     if(textResult.trim()===''){
-        btnObjCopy.style.display = "none";
-        warningMessage.style.display = "flex";        
+        btnObjCopy.style.display = "none";        
         row22.style.display = "none";
         row23.style.display = "none";
-
+        
+        row21.style.display = "flex";
+        setTimeout(() => {
+            row21.style.opacity = 1;
+        }, 10);
     } else {
         btnObjCopy.style.display = "unset";
-        warningMessage.style.display = "none";
         row22.style.display = "flex";
         row23.style.display = "flex";
+
+        row21.style.opacity = 0;
+        setTimeout(()=>{
+            row21.style.display = "none";
+        },1000);
     }        
 }
 
@@ -102,22 +109,12 @@ function decryptButtonColor(){
     }
 }
 
-function hideWarningMessage(){
-    let textResult = textareaObjResult.value;
-
-    if(textResult.lenght>0){
-        warningMessage.style.display = "none";
-    } else {
-        warningMessage.style.display = "unset";
-    }
-}
-
 const textareaObjTarget = document.querySelector("#target");
 const textareaObjResult = document.querySelector("#result");
 const btnObjEncrypt = document.querySelector("#btn-bttm-11");
 const btnObjDecrypt = document.querySelector("#btn-bttm-12");
 const btnObjCopy = document.querySelector("#btn-bttm-2");
-const warningMessage = document.querySelector("#warning-message")
+const row21 = document.querySelector(".row-21") //Warning Message
 const row22 = document.querySelector(".row-22")
 const row23 = document.querySelector(".row-23")
 
