@@ -72,7 +72,7 @@ function textareaChecker(){
         row22.style.display = "flex";
         row23.style.display = "flex";
 
-        row21.style.opacity = 0;
+        row21.style.opacity = "0";
         setTimeout(()=>{
             row21.style.display = "none";
         },1000);
