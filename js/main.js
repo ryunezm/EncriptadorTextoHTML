@@ -23,20 +23,20 @@
 // inserción del texto que será encriptado o desencriptado, y el usuario debe poder escoger entre las dos opciones.
 // El resultado debe ser mostrado en la pantalla.
 
-function vowelsReplacer(vowel){
+function vowelsReplacer(vowel) {
     if (vowel === "a")
         return "ai";
     else if (vowel === "e")
         return "enter";
     else if (vowel === "i")
         return "imes";
-    else if (vowel ==="o")
+    else if (vowel === "o")
         return "ober"
     else if (vowel === "u")
         return "ufat";
 }
 
-function keySearcher(key){
+function keySearcher(key) {
     if (key === "ai")
         return "a";
     else if (key === "enter")
@@ -49,20 +49,20 @@ function keySearcher(key){
         return "u";
 }
 
-function copyText(){
+function copyText() {
     textareaObjResult.select();
-    textareaObjResult.setSelectionRange(0,99999999);
+    textareaObjResult.setSelectionRange(0, 99999999);
     navigator.clipboard.writeText(textareaObjResult.value);
 }
 
-function textareaChecker(){
+function textareaChecker() {
     let textResult = textareaObjResult.value;
 
-    if(textResult.trim()===''){
-        btnObjCopy.style.display = "none";        
+    if (textResult.trim() === '') {
+        btnObjCopy.style.display = "none";
         row22.style.display = "none";
         row23.style.display = "none";
-        
+
         row21.style.display = "flex";
         setTimeout(() => {
             row21.style.opacity = 1;
@@ -73,36 +73,36 @@ function textareaChecker(){
         row23.style.display = "flex";
 
         row21.style.opacity = "0";
-        setTimeout(()=>{
+        setTimeout(() => {
             row21.style.display = "none";
-        },1000);
-    }        
+        }, 1000);
+    }
 }
 
-function encryptText(){
+function encryptText() {
     let textResult = textareaObjTarget.value;
-    textResult = textResult.replace(/[aeiou]/g,  vowelsReplacer)
+    textResult = textResult.replace(/[aeiou]/g, vowelsReplacer)
     document.getElementById('result').value = textResult;
     textareaChecker();
 }
 
-function decryptText(){
+function decryptText() {
     let textResult = textareaObjTarget.value;
     textResult = textResult.replace(/ai|enter|imes|ober|ufat/g, keySearcher)
     document.getElementById('result').value = textResult;
     textareaChecker();
 }
 
-function removeUnacceptedChars(){
+function removeUnacceptedChars() {
     let textResult = textareaObjTarget.value;
     textResult = textResult.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     textareaObjTarget.value = textResult;
 }
 
-function decryptButtonColor(){
+function decryptButtonColor() {
     let textTarget = textareaObjTarget.value;
-    
-    if(textTarget.trim()===''){
+
+    if (textTarget.trim() === '') {
         btnObjDecrypt.style.backgroundColor = "var(--primary-color-light-2)";
     } else {
         btnObjDecrypt.style.backgroundColor = "transparent";
