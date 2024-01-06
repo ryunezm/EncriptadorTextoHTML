@@ -52,7 +52,8 @@ function keySearcher(key) {
 function copyText() {
     textareaObjResult.select();
     textareaObjResult.setSelectionRange(0, 99999999);
-    navigator.clipboard.writeText(textareaObjResult.value);
+    navigator.clipboard.writeText(textareaObjResult.value).then(() => {})
+        .catch(error => console.error("Error copying text:", error));
 }
 
 function textareaChecker() {
@@ -65,7 +66,7 @@ function textareaChecker() {
 
         row21.style.display = "flex";
         setTimeout(() => {
-            row21.style.opacity = 1;
+            row21.style.opacity = "1";
         }, 10);
     } else {
         btnObjCopy.style.display = "unset";

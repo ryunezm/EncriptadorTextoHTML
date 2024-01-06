@@ -22,17 +22,6 @@ body, html{
     font-size: xx-large;
 }
 
-/* Efectos de transición */
-.fade-in{
-    opacity: 1;
-    transition: opacity 3.5s linear;
-}
-
-.fade-out{
-    opacity: 0;
-    transition: opacity 3.5s linear;
-}
-
 /* ______________________________________________________________________ */
 
 /* Estilos para el header */
@@ -326,10 +315,6 @@ header div{
         height: 95%;
         width: 100%;
         resize: none;
-    }
-
-    .p-1{
-        font-size: 1vh;
     }
 
     .button-bottom-1{
